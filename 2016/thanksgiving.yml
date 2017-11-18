@@ -1,0 +1,203 @@
+meal:
+  cranberry_sauce:
+    buffer: 600
+    steps:
+      -
+        name: slice cranberry sauce and put on a plate and put in refrigerator
+        time: 3
+
+  green_beans:
+    notes: http://www.simplyrecipes.com/recipes/green_beans_with_almonds_and_thyme/
+    mep:
+      - blanch & cut green beans
+      - measure out all ingredients
+      - toast almonds
+      - mince 3 cloves garlic
+    steps:
+      -
+        name: melt 1/2 stick butter in a pan big enough to hold the GB
+        resources: stove
+        time: 3
+      -
+        name: add garlic (3 cloves, minced), brown
+        resources: stove
+        time: 5
+      -
+        name: whisk in dijon mustard and 1 tbsp thyme, then add the GB, toss to coat
+        time: 5
+      -
+        name: off heat, add almonds and remaining thyme and serve
+        resources: carolyn
+        time: 2
+
+  cookies:
+    buffer: 120
+    steps:
+      -
+        name: bake at 350
+        time: 6
+        resources: oven350
+      -
+        name: swap racks, continue for 6 min
+        time: 6
+        resources: oven350
+
+  cinnamon_apples:
+    notes: http://www.bettycrocker.com/recipes/slow-cooker-stewed-cinnamon-apples/a82bc1c3-6ba9-4c91-8e0e-cdfb18605365
+    steps:
+      -
+        name: slice and peel 10 cups apples
+        time: 15
+        resources: terry
+      -
+        name: toss apples, butter, and lemon juice with brown sugar and cinnamon to coat; pour cider on top
+        time: 5
+        resources: terry
+      -
+        name: put apples into crock pot, cook on low
+        time: 210
+
+  stuffing:
+    buffer: 5
+    mep:
+      - put it all together morning or night before
+    steps:
+      -
+        name: give sara a heads up for stuffing
+        time: 15
+      -
+        name: bake uncovered until top is browned
+        time: 45
+        resources: oven350
+        stop: true
+
+  sausage_stuffing:
+    notes: http://www.saveur.com/article/recipes/bouchon-bistro-ciabatta-and-sausage-stuffing
+    mep:
+    steps:
+      -
+        name: melt 1 tbsp butter in 12" skillet and cook sausage, breaking it up until browned
+        time: 8
+        resources: stove
+      -
+        name: put sausage in a bowl; add 2 tbsp butter to skillet and cook carrot, onion, and celery til soft
+        time: 6
+      - 
+        name: combine carrot/onion/celery with sausage
+      -
+        name: add stock, oil, parsley, rosemary, sage, bread, salt, and pepper to bowl, toss to combine
+      -
+        name: spread bowl contents into 9x13" baking dish, bake til brown and bread is crisp on top
+        time: 30
+        resources: oven375
+
+  sweet_potatoes:
+    notes: http://www.saveur.com/article/recipes/bouchon-bistro-sweet-potato-puree
+    mep:
+    steps:
+      -
+        name: peel and cut potatoes into 1/2" pieces
+        resources: terry
+        time: 10
+      -
+        name: toss potatoes w/ butter, brown sugar, honey, allspice, salt, and pepper; spread onto baking sheet and bake til tender
+        time: 35
+        resources: oven375
+        stop: true
+      -
+        name: let cool slightly
+        time: 5
+      -
+        name: let cool slightly and combine w/ mascarpone in a food processor; puree until smooth
+        resources: terry
+        time: 5
+      -
+        name: spread mixture into 9x13" dish, top w/ marshmallows and broil until browned in spots
+        time: 2
+        resources: broiler
+
+  corn:
+    buffer: 5
+    notes: http://www.foodnetwork.com/recipes/ina-garten/sauteed-fresh-corn-recipe.html
+    steps:
+      -
+        name: melt butter
+        resources: stove
+        time: 3
+      -
+        name: saute corn w/ salt & pepper (omfg set a timer)
+        time: 12
+        stop: true
+        resources: stove
+
+  gravy:
+    buffer: 5
+    steps:
+      -
+        name: warm gravy in saucepan
+        time: 5
+        resources: stove
+
+  broccolini:
+    buffer: 5
+    steps:
+      -
+        name: boil salted water
+        time: 45
+        resources: bigstove
+      -
+        name: blanch broccolini
+        time: 5
+        stop: true
+        resources: bigstove
+
+  mashed_potatoes:
+    buffer: 5
+    mep: butter coming to room temp, potatoes washed
+    steps:
+      -
+        name: boil water with potatoes
+        time: 30
+        resources: bigstove
+        stop: true
+      -
+        name: let potatoes cool
+        time: 15
+      -
+        name: warm half and half
+        time: 5
+      -
+        name: mix potatoes, butter, half and half, salt, pepper
+        resources: sara
+        time: 5
+
+  turkey:
+    count: 2
+    notes: http://www.epicurious.com/recipes/food/views/My-Favorite-Roast-Turkey-51258050
+    steps:
+      -
+        name: warm oven to 450
+        time: 20
+        resources: oven450
+        parallel: true
+      -
+        name: let turkey warm up slightly
+        time: 60
+      -
+        name: roast turkey
+        resources: oven450
+        time: 30
+      -
+        name: rotate turkey in oven
+        resource: oven450
+      -
+        name: roast turkey until 150F
+        resources: oven450
+        time: 30
+      -
+        name: rest turkey
+        time: 60
+      -
+        name: carve turkey
+        resources: terry
+        time: 15

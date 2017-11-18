@@ -1,0 +1,169 @@
+meal:
+  cranberry_sauce:
+    buffer: 180
+    steps:
+      -
+        name: slice cranberry sauce and put on a plate and put in refrigerator
+        time: 3
+
+  green_beans:
+    notes: https://www.bonappetit.com/recipe/bas-best-green-bean-casserole?mbid=social_twitter
+    mep:
+      - blanch & cut green beans
+      - measure out all ingredients
+    steps:
+      -
+        name: TODO
+        time: 3
+
+  biscuits:
+    notes: https://cooking.nytimes.com/recipes/1016985-reginas-butter-biscuits
+    mep:
+      - make dough
+      - make marmalade butter
+    steps:
+      -
+        name: thaw in refrigerator
+        time: 20
+      -
+        name: bake those fuckers
+        time: 25
+        resources: oven350
+
+  macaroni:
+    buffer: 10
+    mep:
+      - shred chz
+      - make ahead of time
+    steps:
+      -
+        name: make & bake it
+        time: 60
+      -
+        name: just leave it be
+        time: 60
+      -
+        name: warm it up
+        resources: broiler
+        time: 10
+
+  sweet_potatoes:
+    buffer: 2
+    mep:
+      - measure out and cut butter into pieces
+      - cut potatoes into 1 inch pieces
+      - cook this in the morning
+      - page ???
+    steps:
+      -
+        name: spread butter over potatoes in a dish, sprinkle salt
+        time: 5
+      -
+        name: cover with foil
+        time: 0
+      -
+        name: bake potatoes until tender when poked w/ cake tester
+        time: 35
+        resources: oven450
+        stop: true
+      -
+        name: let potatoes cool
+        time: 15
+      -
+        name: cover with sugar
+        time: 5
+      -
+        name: let sit for no damn reason except to save time
+        time: 120
+      -
+        name: broil potatoes
+        time: 5
+        resources: broiler
+        stop: true
+
+  stuffing:
+    buffer: 5
+    mep:
+      - put it all together morning or night before
+    steps:
+      -
+        name: give sara a heads up for stuffing
+        time: 15
+      -
+        name: bake uncovered until top is browned
+        time: 45
+        resources: oven350
+        stop: true
+
+  corn:
+    buffer: 5
+    mep:
+      - zest limes
+      - cut corn off ears
+    notes: http://www.foodnetwork.com/recipes/ina-garten/sauteed-fresh-corn-recipe.html
+    steps:
+      -
+        name: melt butter
+        resources: stove
+        time: 3
+      -
+        name: saute corn w/ salt & pepper & lime (omfg set a timer)
+        time: 12
+        stop: true
+        resources: stove
+
+  gravy:
+    buffer: 5
+    mep:
+      - make gravy ahead of time, keep in fridge
+    steps:
+      -
+        name: warm gravy in saucepan
+        time: 5
+        resources: stove
+
+  mashed_potatoes:
+    buffer: 5
+    mep: 
+      - make ahead of time, so you can just warm up half an hour ahead of time
+      - butter coming to room temp, potatoes washed
+    steps:
+      -
+        name: warm potatoes
+        time: 30
+        resources: stove
+        stop: true
+
+  gbc:
+    buffer: 10
+    notes: https://www.bonappetit.com/recipe/bas-best-green-bean-casserole?mbid=social_twitter
+    mep:
+      - fry shallots
+      - make in the morning to heat w/ onions before serving
+    steps:
+      - 
+        name: warm that bitch up
+        time: 30
+        resources: oven350
+
+  turkey:
+    count: 2
+    notes: http://www.epicurious.com/recipes/food/views/My-Favorite-Roast-Turkey-51258050
+    steps:
+      - 
+        name: pull turkey from fridge
+        time: 30
+      -
+        name: preheat grill
+        time: 30
+        resources: grill
+      -
+        name: grill turkey
+        resources: grill
+        time: 90
+      -
+        name: rest turkey
+        time: 60
+      -
+        name: carve turkey
+        time: 15

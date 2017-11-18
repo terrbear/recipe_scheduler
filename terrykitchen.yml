@@ -1,0 +1,19 @@
+kitchen:
+  -
+    name: oven350
+    count: 4
+  -
+    name: oven450
+    count: 2
+  -
+    name: toaster oven
+    count: 1
+  -
+    name: stove
+    count: 5
+  -
+    name: broiler
+    count: 1
+  -
+    name: grill
+    count: 1

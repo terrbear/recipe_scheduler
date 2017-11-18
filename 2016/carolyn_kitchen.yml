@@ -1,0 +1,31 @@
+kitchen:
+  -
+    name: oven450
+    count: 2
+  -
+    name: oven350
+    count: 2
+  -
+    name: stove
+    count: 4
+  -
+    name: bigstove
+    count: 2
+  -
+    name: oven375
+    count: 2
+  -
+    name: crockpot
+    count: 1
+  -
+    name: broiler
+    count: 1
+  -
+    name: terry
+    count: 2
+  -
+    name: sara
+    count: 1
+  -
+    name: carolyn
+    count: 1

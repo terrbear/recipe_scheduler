@@ -1,0 +1,70 @@
+meal:
+  garlic_bread:
+    steps:
+      -
+        name: warm oven to 350
+        time: 10
+        resources: oven
+      -
+        name: bake for 15m
+        time: 15
+        resources: oven
+        stop: true
+      -
+        name: let bread cool
+        time: 5
+      -
+        name: serve
+
+  sauce:
+    buffer: 5
+    steps:
+      -
+        name: prep ingredients (cut onion in half, open can, 5 tbsp butter)
+        time: 5
+      -
+        name: simmer sauce, stirring and crushing tomatoes occasionally
+        resources: stove
+        time: 45
+        stop: true
+
+  pasta:
+    steps:
+      -
+        name: bring salted water to a boil
+        time: 15
+      -
+        name: boil pasta
+        time: 8
+        stop: true
+      -
+        name: drain pasta
+        time: 1
+      -
+        name: combina pasta with sauce
+        time: 2
+      -
+        name: serve
+
+  zucchini:
+    steps:
+      -
+        name: preheat oil to 350F
+        parallel: true
+        time: 10
+        resources: stove
+      -
+        name: slice zucchini into fry-like pieces
+        time: 5
+      -
+        name: batter zucchini
+        time: 10
+      -
+        name: fry zucchini (in batches if needed)
+        time: 8
+        resources: stove
+      -
+        name: rest
+        time: 3
+      -
+        name: serve

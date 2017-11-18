@@ -1,0 +1,58 @@
+meal:
+  tomato_soup:
+    notes: makes four servings
+    steps:
+      -
+        name: warm soup over medium heat
+        time: 30
+      -
+        name: serve
+
+  grilled_cheese:
+    notes: makes four servings
+    ingredients:
+      -
+        name: unsalted butter
+        amount: one stick
+      -
+        name: bread
+        amount: eight slices
+      -
+        name: gruyere
+        amount: half pound
+
+    steps:
+      -
+        name: preheat oven to 350F
+        time: 10
+        resources: oven
+        parallel: true #TODO
+      -
+        name: slice cheese into four slices
+        time: 5
+      -
+        name: fry bread
+        time: 10
+        resources: stove
+      -
+        name: assemble sandwiches
+        time: 2
+      -
+        name: cook in oven until cheese is melted
+        time: 10
+        resources: oven
+        stop: true
+      -
+        name: serve
+
+kitchen:
+  -
+    name: oven
+    count: 2
+    gate: temperature #TODO
+  -
+    name: toaster oven
+    count: 1
+  -
+    name: stove
+    count: 4

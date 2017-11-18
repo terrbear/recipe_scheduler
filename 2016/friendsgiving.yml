@@ -1,0 +1,250 @@
+meal:
+  cranberry_sauce:
+    buffer: 600
+    steps:
+      -
+        name: slice cranberry sauce and put on a plate and put in refrigerator
+        time: 3
+
+  greenbean_casserole:
+    buffer: 2
+    notes: http://www.saveur.com/article/recipes/bouchon-bistro-haricots-verts-casserole
+    mep:
+      - blanch & cut green beans
+      - measure out all ingredients
+      - slice mushrooms
+    steps:
+      #-
+      #  name: add 3 tbsp oil to saucepan over medium-high heat; add mushrooms; cook til brown
+      #  resources: stove
+      #  time: 10
+      #-
+      #  name: add cream, thyme, and garlic, reduce heat to medium
+      #  resources: stove
+      #  time: 10
+      #  stop: true
+      #-
+      #  name: remove thyme and put in blender. add vinegar, salt & pepper; puree
+      #  time: 5
+      -
+        name: warm mushroom cream over medium heat
+        time: 10
+        resources: stove
+      -
+        name: toss cream with haricot verts
+        time: 2
+      -
+        name: wipe pan, add remaining oil, heat until 300F
+        time: 10
+        resources: stove
+      -
+        name: toss shallots in flour and fry until crisp (2-3min/batch)
+        time: 10
+        resources: stove
+      -
+        name: bake casserole til brown and bubbly
+        time: 25
+        resources: oven400
+
+  stuffing:
+    buffer: 5
+    mep:
+      - put it all together morning or night before
+    steps:
+      -
+        name: bake uncovered until top is browned
+        time: 45
+        resources: oven350
+        stop: true
+
+  sweet_potatoes:
+    buffer: 2
+    mep:
+      - measure out and cut butter into pieces
+      - cut potatoes into 1 inch pieces
+    steps:
+      -
+        name: spread butter over potatoes in a dish, sprinkle salt
+        time: 5
+      -
+        name: cover with foil
+        time: 0
+      -
+        name: bake potatoes until tender when poked w/ cake tester
+        time: 35
+        resources: oven450
+        stop: true
+      -
+        name: let potatoes cool
+        time: 15
+      -
+        name: cover with sugar
+        time: 5
+      -
+        name: broil potatoes
+        time: 5
+        resources: broiler
+        stop: true
+
+  corn:
+    buffer: 5
+    notes: http://www.foodnetwork.com/recipes/ina-garten/sauteed-fresh-corn-recipe.html
+    steps:
+      -
+        name: melt butter
+        resources: stove
+        time: 3
+      -
+        name: saute corn w/ salt & pepper
+        time: 12
+        stop: true
+
+  macaroni:
+    notes: http://www.saveur.com/article/recipes/bouchon-bistro-macaroni-au-gratin
+    buffer: 10
+    steps:
+      -
+        name: boil water
+        resources: stove
+        time: 45
+      -
+        name: boil macaroni
+        resources: stove
+        time: 8
+      -
+        name: stir 2tbsp butter into pasta
+        time: 1
+        resources: stove
+      -
+        name: melt 10tbsp butter in pan
+        time: 3
+        resources: stove
+      -
+        name: cook minced onion until golden
+        time: 6
+        resources: stove
+      -
+        name: stir in flour, cook
+        time: 3
+        resources: stove
+      -
+        name: add onion half, cloves, bay leaves, and milk to pan and bring to boil
+        time: 5
+        resources: stove
+      -
+        name: reduce heat to medium, cook until thickened
+        time: 6
+        resources: stove
+      -
+        name: strain sauce onto pasta, add 3/4 cheese, nutmeg, salt, and pepper
+        time: 3
+      -
+        name: transfer to baking dish, top with remaining cheese and bread crumbs
+        time: 1
+      -
+        name: bake until golden and bubbly
+        time: 40
+        resources: oven350
+
+  pumpkin_seeds:
+    notes: http://allrecipes.com/recipe/13768/roasted-pumpkin-seeds/
+    buffer: 75
+    steps:
+      -
+        name: preheat toaster oven to 300
+        time: 10
+      - 
+        name: melt butter
+        time: 3
+      -
+        name: toss everything together
+        time: 2
+      -
+        name: spread seeds in single layer on a baking sheet, bake
+        resources: toaster oven
+        time: 45
+
+  gravy:
+    buffer: 5
+    steps:
+      -
+        name: warm gravy in saucepan
+        time: 5
+        resources: stove
+
+  biscuits:
+    buffer: 5
+    mep:
+      - muffin tins ready
+    steps:
+      -
+        name: thaw biscuits in muffin tins in refrigerator
+        time: 20
+      -
+        name: bake biscuits until golden brown
+        time: 23
+        resources: oven350
+        stop: true
+
+  broccoli:
+    buffer: 0
+    steps:
+      -
+        name: boil salted water
+        time: 45
+        resources: stove
+      -
+        name: blanch broccolini
+        time: 5
+        stop: true
+        resources: stove
+
+  mashed_potatoes:
+    buffer: 15
+    notes: first recipe in ad hoc
+    mep: butter coming to room temp, potatoes washed
+    steps:
+      -
+        name: boil water with potatoes
+        time: 30
+        resources: stove
+        stop: true
+      -
+        name: let potatoes cool
+        time: 15
+      -
+        name: warm half and half
+        time: 5
+      -
+        name: mix potatoes, butter, half and half, salt, pepper
+        time: 5
+
+  turkey:
+    count: 2
+    notes: http://www.epicurious.com/recipes/food/views/My-Favorite-Roast-Turkey-51258050
+    steps:
+      -
+        name: warm oven to 450
+        time: 20
+        resources: oven450
+        parallel: true
+      -
+        name: let turkey warm up slightly
+        time: 60
+      -
+        name: roast turkey
+        resources: oven450
+        time: 45
+      -
+        name: rotate turkey in oven
+        resource: oven450
+      -
+        name: roast turkey until 150F
+        resources: oven450
+        time: 45
+      -
+        name: rest turkey
+        time: 90
+      -
+        name: carve turkey
+        time: 10
